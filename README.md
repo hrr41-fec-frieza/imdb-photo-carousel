@@ -1,1 +1,1 @@
-# imdb-video-photo-carousel
+# imdb-photo-carousel
