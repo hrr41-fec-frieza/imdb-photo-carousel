@@ -1,1 +1,1 @@
-# imdb-photo-carousel
+# mooviesdb-photo-carousel
