@@ -1,0 +1,24 @@
+{
+  "name": "mooviesdb-photo-carousel",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git"
+  },
+  "version": "1.0.0",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrr41-fec-frieza/mooviesdb-photo-carousel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hrr41-fec-frieza/mooviesdb-photo-carousel/issues"
+  },
+  "homepage": "https://github.com/hrr41-fec-frieza/mooviesdb-photo-carousel#readme"
+}
