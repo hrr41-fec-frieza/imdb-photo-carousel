@@ -12,7 +12,7 @@ db.once('open', () => {
 const Schema = mongoose.Schema;
 var photoSchema = new Schema({
   id: Number,
-  img_Url: String,
+  img_url: String,
   description: String, // description of the picture
   title: String, // movie title
   people: String, // names of people in the picture

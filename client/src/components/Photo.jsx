@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Photo = () => (
+const Photo = ({img}) => (
   <div>
-    <p>Hello</p>
+    {console.log({img})}
+    <img src={img} />
   </div>
 );
+
 export default Photo;
