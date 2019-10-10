@@ -7,7 +7,7 @@ const save = (req, res, cb) => {
   const photos = [
     {
       'id': 1,
-      'img_Url': 'https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg',
+      'img_url': 'https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg',
       'description': 'A cow looking at the camera',
       'title': 'Cows',
       'people': 'One Cow'
