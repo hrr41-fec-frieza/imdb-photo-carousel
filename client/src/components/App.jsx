@@ -16,7 +16,6 @@ class App extends React.Component {
         return results.json();
       })
       .then(data => {
-        console.log('data', data)
         this.setState({ photos: data });
       })
       .catch(error => {
