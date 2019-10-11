@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = 3000;
 const db = require('../database/index.js');
-const dbSeed = require('../database/dbSeed.js');
+const seedDb = require('../database/dbSeed.js');
 
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
