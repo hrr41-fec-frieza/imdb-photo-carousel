@@ -27,7 +27,10 @@ class App extends React.Component {
     return (
       <div>
         <h1>Photos</h1>
-        <PhotoList photos={this.state.photos}/>
+        <div>
+          <PhotoList photos={this.state.photos} />
+        </div>
+
       </div>
     );
   }
