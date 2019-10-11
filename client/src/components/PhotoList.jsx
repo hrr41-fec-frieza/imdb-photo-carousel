@@ -1,12 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import Photo from './Photo.jsx';
 
+const Div = styled.div`
+  display: flex;
+  flex-direction: row
+`;
+
 const PhotoList = ({ photos }) => (
-  <div className="row">
+  <Div>
     {photos.map((photo, index) =>
       <Photo img={photo.img_url} key={index} />
     )}
-  </div>
+  </Div>
 );
 
 export default PhotoList;
