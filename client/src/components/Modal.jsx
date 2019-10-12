@@ -30,7 +30,8 @@ const Section = styled.section`
 
 const H4 = styled.h4`
   text-align: center;
-  color: white;
+  color: #ccc;
+  font-family: sans-serif;
 `;
 
 const Modal = ({show, handleClose, children, img}) => {
