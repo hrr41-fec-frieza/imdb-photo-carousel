@@ -10,7 +10,7 @@ const Div = styled.div`
 const PhotoList = ({ photos }) => (
   <Div>
     {photos.map((photo, index) =>
-      <Photo img={photo.img_url} key={index} />
+      <Photo photo={photo} key={index} />
     )}
   </Div>
 );
