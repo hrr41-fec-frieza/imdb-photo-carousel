@@ -1,55 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
+import Modal from './Modal.jsx';
+
 
 const Img = styled.img`
   height: 150px;
   width: 200px;
 `;
 
-const BigImg = styled.img`
-  height: 300px;
-  width: 400px;
-`
-// const Photo = ({img}) => (
-//   <div>
-//     <Img src={img} />
-//   </div>
-// );
 
 class Photo extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isOpen: false
+      show: false
     };
 
-    this.expandPic = this.expandPic.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
-  expandPic() {
-    // console.log('Works');
+  showModal(e) {
     this.setState({
-      isOpen: !this.state.isOpen
+      show: true
+    });
+  }
+
+  hideModal(e) {
+    this.setState({
+      show: false
     });
   }
 
   render() {
-    const isOpen = this.state.isOpen;
-    let pic;
-
-    if (isOpen) {
-      pic = <Img onClick={this.expandPic} src={this.props.img} />
-    } else {
-      pic = <BigImg onClick={this.expandPic} src={this.props.img} />
-    }
-
     return (
       <div>
-        {pic}
+        <Modal show={this.state.show} handleClose={this.hideModal} img={this.props.photo.img_url}>
+          <p>{this.props.photo.description}</p>
+          <p>Titles: {this.props.photo.title}</p>
+          <p>People: {this.props.photo.people}</p>
+        </Modal>
+        <Img src={this.props.photo.img_url} onClick={this.showModal}/>
       </div>
-    )
+    );
   }
 }
-
 export default Photo;
