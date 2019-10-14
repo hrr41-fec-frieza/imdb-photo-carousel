@@ -26,4 +26,4 @@ app.listen(port, () => {
 module.exports = {
   listen: app.listen,
   get: app.get
-}
+};
