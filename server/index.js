@@ -14,7 +14,7 @@ app.get('/photos', (req, res) => {
       console.log('Error getting photos at server: ', err);
     } else {
       console.log('Successful at getting photos ');
-      res.send(photos);
+      res.send(photos); // photos is an array
     }
   });
 });
@@ -24,6 +24,5 @@ app.listen(port, () => {
 });
 
 module.exports = {
-  listen: app.listen,
   get: app.get
 };

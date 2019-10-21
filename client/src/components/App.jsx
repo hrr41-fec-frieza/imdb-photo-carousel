@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import PhotoList from './PhotoList.jsx';
 
 class App extends React.Component {
@@ -11,15 +12,15 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/photos')
+    axios.get('http://localhost:3000/photos')
       .then(results => {
-        return results.json();
+        return results.data;
       })
       .then(data => {
         this.setState({ photos: data });
       })
       .catch(error => {
-        console.log('FETCH was unsuccessful: ', error);
+        console.log('GET was unsuccessful: ', error);
       });
   }
 
