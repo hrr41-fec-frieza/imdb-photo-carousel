@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from  'styled-components';
 
-const BigImg = styled.img`
+const BBigImg = styled.img`
   margin: auto;
   position: fixed;
   top: 150px;
@@ -13,7 +13,7 @@ const BigImg = styled.img`
   height: auto;
 `;
 
-const Section = styled.section`
+const BSection = styled.section`
   position: fixed;
   width: 100%
   height: 100%;
@@ -28,7 +28,7 @@ const Section = styled.section`
 
 `;
 
-const H4 = styled.h4`
+const BH4 = styled.h4`
   text-align: center;
   color: #ccc;
   font-family: sans-serif;
@@ -43,10 +43,10 @@ const Modal = ({show, handleClose, children, img}) => {
 
   return (
     <div className={appearHide}>
-      <Section>
-        <BigImg onClick={handleClose} src={img} />
-        <H4>{children}</H4>
-      </Section>
+      <BSection>
+        <BBigImg onClick={handleClose} src={img} />
+        <BH4>{children}</BH4>
+      </BSection>
     </div>
   );
 };
