@@ -27,7 +27,7 @@ var get = (callback) => {
     } else {
       callback(null, data);
     }
-  });
+  }).limit(6);
 };
 
 module.exports = {
