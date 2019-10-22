@@ -10,9 +10,17 @@
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
     "start": "node database/dbSeed.js",
-    "test": "jest"
+    "test-server": "jest ./specs/server.spec.js",
+    "test-client": "jest ./specs/client.spec.js"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./jestSetUp.js"
+    ]
   },
   "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "babel-jest": "^24.9.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.3",
@@ -23,12 +31,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.3",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
     "jest": "^24.9.0",
+    "react-test-renderer": "^16.10.2",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
