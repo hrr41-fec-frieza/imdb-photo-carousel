@@ -8,7 +8,7 @@ const photos = [
   },
   {
     'id': 2,
-    'img_url': 'https://fecphotosbucket.s3.us-east-2.amazonaws.com/cow2.jpeg',
+    'img_url': 'https://fecphotosbucket.s3.us-east-2.amazonaws.com/cow24.jpeg',
     'description': 'Another cow looking at the camera',
     'title': 'Cows',
     'people': 'Another brown cow'
@@ -22,7 +22,7 @@ const photos = [
   },
   {
     'id': 4,
-    'img_url': 'https://fecphotosbucket.s3.us-east-2.amazonaws.com/cow4.jpeg',
+    'img_url': 'https://fecphotosbucket.s3.us-east-2.amazonaws.com/cow13.jpeg',
     'description': 'A cow laying down on the grass',
     'title': 'Cows',
     'people': 'Brown cow'
@@ -36,7 +36,7 @@ const photos = [
   },
   {
     'id': 6,
-    'img_url': 'https://fecphotosbucket.s3.us-east-2.amazonaws.com/cow11.jpeg',
+    'img_url': 'https://fecphotosbucket.s3.us-east-2.amazonaws.com/cow27.jpeg',
     'description': 'Cow using its tongue',
     'title': 'Cows',
     'people': 'Cow and his tongue'
