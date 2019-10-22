@@ -11,8 +11,7 @@ db.once('open', () => {
 
 const Schema = mongoose.Schema;
 var photoSchema = new Schema({
-  id: Number,
-  img_url: String,
+  imgUrl: String,
   description: String, // description of the picture
   title: String, // movie title
   people: String, // names of people in the picture
@@ -30,7 +29,19 @@ var get = (callback) => {
   }).limit(6);
 };
 
+var save = (description, title, people, imgUrl) => {
+  var newPhoto = new Photo({imgUrl, description, title, people});
+
+  newPhoto.save( (err, photo) => {
+    if (err) {
+      console.log('Error: ', err);
+    } else {
+      console.log('Database seeded');
+    }
+  });
+};
+
 module.exports = {
-  Photo: Photo,
+  save: save,
   get: get
 };

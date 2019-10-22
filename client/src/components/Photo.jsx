@@ -36,12 +36,12 @@ class Photo extends React.Component {
   render() {
     return (
       <div>
-        <Modal show={this.state.show} handleClose={this.hideModal} img={this.props.photo.img_url}>
-          <p>{this.props.photo.description}</p>
+        <Modal show={this.state.show} handleClose={this.hideModal} img={this.props.photo.imgUrl}>
+          <p>Description: {this.props.photo.description}</p>
           <p>Titles: {this.props.photo.title}</p>
           <p>People: {this.props.photo.people}</p>
         </Modal>
-        <BImg src={this.props.photo.img_url} onClick={this.showModal}/>
+        <BImg src={this.props.photo.imgUrl} onClick={this.showModal}/>
       </div>
     );
   }
