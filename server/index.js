@@ -3,9 +3,12 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = 1258;
 const db = require('../database/index.js');
+const cors = require('cors');
 
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
+app.use(cors());
+
 
 
 app.get('/photos', (req, res) => {
