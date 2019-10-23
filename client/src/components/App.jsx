@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import PhotoList from './PhotoList';
+import PhotoList from './PhotoList.jsx';
 
 class App extends React.Component {
   constructor() {
