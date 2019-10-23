@@ -1,17 +1,18 @@
 const express = require('express');
-
 const bodyParser = require('body-parser');
-
-const port = 1258;
-
 const cors = require('cors');
-
 const db = require('../database/index.js');
+const port = proccess.env.PORT || 1258;
 
 const app = express();
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 app.use(cors());
+
+
+app.get('/', (req, res) => {
+  res.send('Rendering onto HTML successful');
+});
 
 app.get('/photos', (req, res) => {
   db.get((err, photos) => {
