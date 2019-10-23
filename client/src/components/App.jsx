@@ -28,6 +28,7 @@ class App extends React.Component {
         <h1>Photos</h1>
         <div>
           <PhotoList photos={this.state.photos} />
+          <p>See all photos</p>
         </div>
       </div>
     );
