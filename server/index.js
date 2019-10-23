@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const db = require('../database/index.js');
-const port = proccess.env.PORT || 1258;
+const port = process.env.PORT || 1258;
 
 const app = express();
 app.use(express.static(__dirname + '/../client/dist'));
