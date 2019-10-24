@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.send('Rendering onto HTML successful');
 });
 
-app.get('/photos', (req, res) => {
+app.get('/api/photos', (req, res) => {
   db.get((err, photos) => {
     if (err) {
       console.log('Error getting photos at server: ', err);

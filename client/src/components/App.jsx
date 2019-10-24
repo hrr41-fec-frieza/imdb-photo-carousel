@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:1258/photos')
+    axios.get('http://localhost:1258/api/photos')
       .then( (results) => { return results.data; })
       .then( (data) => {
         this.setState({ photos: data });
