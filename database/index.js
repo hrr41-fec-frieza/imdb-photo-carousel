@@ -11,6 +11,7 @@ db.once('open', () => {
 
 const Schema = mongoose.Schema;
 var photoSchema = new Schema({
+  id: Number,
   imgUrl: String,
   description: String, // description of the picture
   title: String, // movie title
@@ -29,8 +30,19 @@ var get = (callback) => {
   }).limit(6);
 };
 
-var save = (description, title, people, imgUrl) => {
-  var newPhoto = new Photo({imgUrl, description, title, people});
+var getById = (id, callback) => {
+  Photo.find({id: id}, (err, data) => {
+    if (err) {
+      callback(err, null);
+    } else {
+      callback(null, data);
+    }
+  }).limit(6);
+};
+
+
+var save = (id, description, title, people, imgUrl) => {
+  var newPhoto = new Photo({id, imgUrl, description, title, people});
 
   newPhoto.save( (err, photo) => {
     if (err) {
@@ -42,6 +54,7 @@ var save = (description, title, people, imgUrl) => {
 };
 
 module.exports = {
+  getById: getById,
   save: save,
   get: get
 };

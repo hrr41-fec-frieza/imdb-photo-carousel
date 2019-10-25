@@ -9,17 +9,38 @@ class App extends React.Component {
     this.state = {
       photos: [],
     };
+
+    this.getPhotos = this.getPhotos.bind(this);
   }
 
+  getPhotos(path) {
+    if (path === '/') {
+      axios.get('http://localhost:1258/api/photos')
+        .then( (results) => { return results.data; })
+        .then( (data) => {
+          console.log('yes')
+          this.setState({ photos: data });
+        })
+        .catch( (error) => {
+          console.log('GET was unsuccessful: ', error);
+        });
+    } else {
+      path = path.slice(2); //199
+      axios.get(`http://localhost:1258/api/photos/?id=${path}`)
+        .then( (results) => { return results.data; })
+        .then( (data) => {
+          console.log('yes yes')
+          this.setState({ photos: data });
+        })
+        .catch( (error) => {
+          console.log('GET was unsuccessful: ', error);
+        });
+    }
+  };
+
   componentDidMount() {
-    axios.get('http://localhost:1258/api/photos')
-      .then( (results) => { return results.data; })
-      .then( (data) => {
-        this.setState({ photos: data });
-      })
-      .catch( (error) => {
-        console.log('GET was unsuccessful: ', error);
-      });
+    var path = window.location.href.slice(21);
+    this.getPhotos(path);
   }
 
   render() {
