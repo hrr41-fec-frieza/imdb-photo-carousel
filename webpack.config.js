@@ -1,5 +1,10 @@
+const webpack = require('webpack');
+
 module.exports = {
-  entry: __dirname + '/client/src/index.jsx',
+  entry: {
+    vendor: ["styled-components"],
+    main: __dirname + '/client/src/index.jsx',
+  },
   module: {
     rules: [
       {
@@ -14,8 +19,32 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 30000,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      automaticNameMaxLength: 30,
+      name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: __dirname + '/client/dist'
   }
 };
