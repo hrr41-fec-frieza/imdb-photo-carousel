@@ -1,18 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import './css/PhotoList.css';
 import Photo from './Photo.jsx';
 
-const BDiv = styled.div`
-  display: flex;
-  flex-direction: row
-`;
 
 const PhotoList = ({ photos }) => (
-  <BDiv>
+  <div className='div'>
     {photos.map((photo, index) =>
       <Photo photo={photo} key={index} />
     )}
-  </BDiv>
+  </div>
 );
 
 export default PhotoList;

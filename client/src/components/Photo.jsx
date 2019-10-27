@@ -1,12 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import './css/Photo.css';
 import Modal from './Modal.jsx';
-
-
-const BImg = styled.img`
-  height: 150px;
-  width: 200px;
-`;
 
 
 class Photo extends React.Component {
@@ -41,7 +35,7 @@ class Photo extends React.Component {
           <p>Titles: {this.props.photo.title}</p>
           <p>People: {this.props.photo.people}</p>
         </Modal>
-        <BImg src={this.props.photo.imgUrl} onClick={this.showModal}/>
+        <img className='b-Image' src={this.props.photo.imgUrl} onClick={this.showModal}/>
       </div>
     );
   }
