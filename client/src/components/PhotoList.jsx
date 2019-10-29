@@ -1,10 +1,9 @@
 import React from 'react';
-import './css/PhotoList.css';
+import styles from './css/PhotoList.css';
 import Photo from './Photo.jsx';
 
-
 const PhotoList = ({ photos }) => (
-  <div className='div'>
+  <div className={styles.div}>
     {photos.map((photo, index) =>
       <Photo photo={photo} key={index} />
     )}
