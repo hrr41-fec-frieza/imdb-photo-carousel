@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Photo.css';
+import styles from './css/Photo.css';
 import Modal from './Modal.jsx';
 
 
@@ -35,7 +35,7 @@ class Photo extends React.Component {
           <p>Titles: {this.props.photo.title}</p>
           <p>People: {this.props.photo.people}</p>
         </Modal>
-        <img className='b-Image' src={this.props.photo.imgUrl} onClick={this.showModal}/>
+        <img className={styles.bImage} src={this.props.photo.imgUrl} onClick={this.showModal}/>
       </div>
     );
   }

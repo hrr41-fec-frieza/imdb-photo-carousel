@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Modal.css';
+import styles from './css/Modal.css';
 
 
 const Modal = ({show, handleClose, children, img}) => {
@@ -11,9 +11,9 @@ const Modal = ({show, handleClose, children, img}) => {
 
   return (
     <div className={appearHide}>
-      <div className='section'>
-        <img className='big-image' onClick={handleClose} src={img} />
-        <h4 className='h4'>{children}</h4>
+      <div className={styles.section}>
+        <img className={styles.bigImg} onClick={handleClose} src={img} />
+        <h4 className={styles.h4}>{children}</h4>
       </div>
     </div>
   );

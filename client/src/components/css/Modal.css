@@ -1,4 +1,4 @@
-.big-image {
+.bigImg {
   margin: auto;
   position: fixed;
   top: 150px;
@@ -22,6 +22,7 @@
   cursor: pointer;
   backface-visibility: hidden;
   background: black;
+  z-index: 1000;
 }
 
 .h4 {
