@@ -15,7 +15,7 @@ class App extends React.Component {
 
   getPhotos(path) {
     if (path === '/') {
-      axios.get('http://localhost:1258/api/photos')
+      axios.get('/api/photos')
         .then( (results) => { return results.data; })
         .then( (data) => {
           console.log('yes')
