@@ -1,5 +1,3 @@
-// this is where the database will be connected to
-// and the schema is created
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/photocarousel');
 var db = mongoose.connection;
@@ -13,9 +11,9 @@ const Schema = mongoose.Schema;
 var photoSchema = new Schema({
   id: Number,
   imgUrl: String,
-  description: String, // description of the picture
-  title: String, // movie title
-  people: String, // names of people in the picture
+  description: String,
+  title: String,
+  people: String,
 });
 
 var Photo = mongoose.model('Photo', photoSchema);
@@ -46,9 +44,7 @@ var save = (id, description, title, people, imgUrl) => {
 
   newPhoto.save( (err, photo) => {
     if (err) {
-      console.log('Error: ', err);
-    } else {
-      console.log('Database seeded');
+      throw err;
     }
   });
 };

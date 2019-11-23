@@ -14,19 +14,17 @@ app.get('/api/photos', (req, res) => {
   if (req.url === '/api/photos') {
     db.get((err, photos) => {
       if (err) {
-        console.log('Error getting photos at server: ', err);
+        throw err;
       } else {
-        console.log('Successful at getting photos ');
-        res.send(photos); // photos is an array
+        res.send(photos);
       }
     });
   } else {
     var param = req.query.id;
     db.getById(param, (err, photos) => {
       if (err) {
-        console.log('Error getting photos by Id: ', err);
+        throw err;
       } else {
-        console.log('Successful at getting photos by Id: ', param);
         res.send(photos);
       }
     });

@@ -1,6 +1,3 @@
-// this is where the photos will be saved from the db
-
-// this is the model
 const model = require('./index.js');
 const data = require('./data.js');
 const faker = require('faker');
