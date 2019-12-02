@@ -1,5 +1,3 @@
-const webpack = require('webpack');
-
 module.exports = {
   entry: __dirname + '/client/src/index.jsx',
   module: {
