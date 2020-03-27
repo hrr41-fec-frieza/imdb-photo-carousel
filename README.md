@@ -1,7 +1,8 @@
-# Project Name
-# mooviesdb-photo-carousel
+# Mooviesdb-photo-carousel
+  > An information source for films
 
-> Project description
+# Technologies Used
+  > React, Node.js/Express, MongoDB/Mongoose, AWS (S3 & EC2)
 
 ## Related Projects
 
