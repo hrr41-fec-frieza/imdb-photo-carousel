@@ -2,7 +2,7 @@
   > An information source for films
 
 # Technologies Used
-  > React, Node.js/Express, MongoDB/Mongoose, AWS (S3 & EC2)
+  > React, Node.js/Express, MongoDB/Mongoose, AWS (S3 & EC2), CSS Modules
 
 ## Related Projects
 
